@@ -45,7 +45,8 @@ const App = () => {
       name: name,
       number: number,
     };
-    setState([...contacts, newContact]);
+    //setState([...contacts, newContact]);
+    setState(prevContacts => [newContact, ...prevContacts]);
   };
 
   const onDeleteContact = contactId => {
